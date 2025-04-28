@@ -13,29 +13,114 @@
 1. 设 $a$ 是有理数，$b$ 是无理数. 求证：$a + b$ 和 $a - b$ 都是无理数；当 $a \neq 0$ 时，$ab$ 和 $b/a$ 也都是无理数.
 
 \begin{solution}
+此题可使用反证法进行证明.
 
+（1）假定 $a + b$ 为有理数，则 $\displaystyle a + b = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+
+因为 $a$ 为有理数，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+
+由此可得 $\displaystyle b = (a + b) - a = \frac{m}{n} - \frac{m'}{n'} = \frac{mn' - m'n}{nn'}$.
+
+这与 $b$ 为无理数的前提相矛盾，所以原假设不成立，$a + b$ 不为有理数.
+
+\vspace{1.5em}
+
+（2）假定 $a - b$ 为有理数，则 $\displaystyle a - b = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+
+因为 $a$ 为有理数，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+
+由此可得 $\displaystyle b = a - (a - b) = \frac{m'}{n'} - \frac{m}{n} = \frac{m'n - mn'}{nn'}$.
+
+这与 $b$ 为无理数的前提相矛盾，所以原假设不成立，$a - b$ 不为有理数.
+
+\vspace{1.5em}
+
+（3）假定 $ab$ 为有理数，则 $\displaystyle ab = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+
+因为 $a$ 为有理数且 $a \neq 0$，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+
+由此可得 $\displaystyle b = \frac{ab}{a} = \frac{m}{n}/\frac{m'}{n'} = \frac{mn'}{m'n}$.
+
+这与 $b$ 为无理数的前提相矛盾，所以原假设不成立，$ab$ 不为有理数.
+
+\vspace{1.5em}
+
+（4）假定 $b/a$ 为有理数，则 $\displaystyle b/a = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+
+因为 $a$ 为有理数且 $a \neq 0$，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+
+由此可得 $\displaystyle b = b/a * a = \frac{m}{n}*\frac{m'}{n'} = \frac{mm'}{nn'}$.
+
+这与 $b$ 为无理数的前提相矛盾，所以原假设不成立，$b/a$ 不为有理数.
 \end{solution}
 
 2. 求证：两个不同的有理数之间有有理数.
 
-3. 求证：$\sqrt{2}$，$\sqrt{3}$ 以及 $\sqrt{2} + \sqrt{3}$ 都是无理数.
-
-4. 把下列循环小数表示为分数：
-\[ 0.2499\ 99\cdots\text{，}\;0.\dot{3}7\dot{5}\text{，}\;4.\dot{5}1\dot{8} . \]
-
 \begin{solution}
-令 $a = 0.2499\ 99\cdots$
+设 $a, b \in \R$ 满足 $a < b$，则可得不等式 $2a < a + b < 2b$.
+
+令 $\displaystyle c = \frac{a + b}{2}$，则 $a < c < b$.
+
+由此可得，对于任何不相同的有理数 $a, b$，都必然存在有理数 $c$，满足 $a < c < b$.
 \end{solution}
 
-5. 设 $r\text{,}s\text{,}t$ 都是有理数. 求证：\\
+3. 求证：$\sqrt{2}$，$\sqrt{3}$ 以及 $\sqrt{2} + \sqrt{3}$ 都是无理数.
+
+\begin{solution}
+
+\end{solution}
+
+4. 把下列循环小数表示为分数：
+\[ 0.2499\ 99\cdots,\qquad0.\dot{3}7\dot{5},\qquad4.\dot{5}1\dot{8} \text{.} \]
+
+\begin{solution}
+（1）令 $a = 0.2499\ 99\cdots$，则：
+
+\begin{align*}
+    1000a & = 249.\dot{9}\\
+    100a & = 24.\dot{9}\\
+    900a & = 225\\
+    a & = \frac{1}{4}
+\end{align*}
+
+（2）令 $b = 0.\dot{3}7\dot{5}$，则：
+
+\begin{align*}
+    1000b & = 375.\dot{3}7\dot{5}\\
+    999b & = 375\\
+    b & = \frac{125}{333}
+\end{align*}
+
+（3）令 $c = 4.\dot{5}1\dot{8}$，则：
+
+\begin{align*}
+    1000c & = 4518.\dot{5}1\dot{8}\\
+    999c & = 4514\\
+    c & = \frac{4514}{999}
+\end{align*}
+\end{solution}
+
+5. 设 $r, s, t$ 都是有理数. 求证：\\
 \indent（1）若 $r + s\sqrt{2} = 0$，则 $r = s = 0$；\\
 \indent（2）若 $r + s\sqrt{2} + t\sqrt{3} = 0$，则 $r = s = t = 0$.
 
-6. 设实数 $a_1\text{，}a_2\text{,}\cdots\text{，}a_n$ 都有相同的符号，且都大于 $-1$. 证明：
-\[ (1 + a_1)\ (1 + a_2) \cdots (1 + a_n) \geq 1 + a_1 + a_2 + \cdots + a_n . \]
+\begin{solution}
 
-7. 设 $a\text{，}b$ 是实数，且 $|a| < 1\text{，}|b| < 1$. 证明：
-\[ \left| \frac{a + b}{1 + ab} \right| < 1 . \]
+\end{solution}
+
+6. 设实数 $a_1, a_2, \cdots, a_n$ 都有相同的符号，且都大于 $-1$. 证明：
+\[ (1 + a_1)\ (1 + a_2) \cdots (1 + a_n) \geq 1 + a_1 + a_2 + \cdots + a_n \text{.} \]
+
+\begin{solution}
+
+\end{solution}
+
+7. 设 $a, b$ 是实数，且 $|a| < 1, |b| < 1$. 证明：
+\[ \left| \frac{a + b}{1 + ab} \right| < 1 \text{.} \]
+
+\begin{solution}
+
+\end{solution}
 
 \ifx\allfiles\undefined
 \end{document}
