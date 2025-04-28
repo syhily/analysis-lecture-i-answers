@@ -15,9 +15,9 @@
 \begin{solution}
 此题可使用反证法进行证明.
 
-（1）假定 $a + b$ 为有理数，则 $\displaystyle a + b = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+（1）假定 $a + b$ 为有理数，则 $\displaystyle a + b = \frac{m}{n}$，其中 $m, n \in \Z$.
 
-因为 $a$ 为有理数，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+因为 $a$ 为有理数，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \Z$.
 
 由此可得 $\displaystyle b = (a + b) - a = \frac{m}{n} - \frac{m'}{n'} = \frac{mn' - m'n}{nn'}$.
 
@@ -25,9 +25,9 @@
 
 \vspace{1.5em}
 
-（2）假定 $a - b$ 为有理数，则 $\displaystyle a - b = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+（2）假定 $a - b$ 为有理数，则 $\displaystyle a - b = \frac{m}{n}$，其中 $m, n \in \Z$.
 
-因为 $a$ 为有理数，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+因为 $a$ 为有理数，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \Z$.
 
 由此可得 $\displaystyle b = a - (a - b) = \frac{m'}{n'} - \frac{m}{n} = \frac{m'n - mn'}{nn'}$.
 
@@ -35,9 +35,9 @@
 
 \vspace{1.5em}
 
-（3）假定 $ab$ 为有理数，则 $\displaystyle ab = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+（3）假定 $ab$ 为有理数，则 $\displaystyle ab = \frac{m}{n}$，其中 $m, n \in \Z$.
 
-因为 $a$ 为有理数且 $a \neq 0$，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+因为 $a$ 为有理数且 $a \neq 0$，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \Z$.
 
 由此可得 $\displaystyle b = \frac{ab}{a} = \frac{m}{n}/\frac{m'}{n'} = \frac{mn'}{m'n}$.
 
@@ -45,9 +45,9 @@
 
 \vspace{1.5em}
 
-（4）假定 $b/a$ 为有理数，则 $\displaystyle b/a = \frac{m}{n}$，其中 $m, n \in \mathbb{N}$.
+（4）假定 $b/a$ 为有理数，则 $\displaystyle b/a = \frac{m}{n}$，其中 $m, n \in \Z$.
 
-因为 $a$ 为有理数且 $a \neq 0$，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \mathbb{N}$.
+因为 $a$ 为有理数且 $a \neq 0$，则 $\displaystyle a = \frac{m'}{n'}$，其中 $m', n' \in \Z$.
 
 由此可得 $\displaystyle b = b/a * a = \frac{m}{n}*\frac{m'}{n'} = \frac{mm'}{nn'}$.
 
@@ -57,7 +57,7 @@
 2. 求证：两个不同的有理数之间有有理数.
 
 \begin{solution}
-设 $a, b \in \R$ 满足 $a < b$，则可得不等式 $2a < a + b < 2b$.
+设 $a, b \in \Q$ 满足 $a < b$，则可得不等式 $2a < a + b < 2b$.
 
 令 $\displaystyle c = \frac{a + b}{2}$，则 $a < c < b$.
 
@@ -67,7 +67,37 @@
 3. 求证：$\sqrt{2}$，$\sqrt{3}$ 以及 $\sqrt{2} + \sqrt{3}$ 都是无理数.
 
 \begin{solution}
+假定 $\sqrt{2}$ 为有理数，则存在 ${m, n \in \Z}$ 使得 $\displaystyle\sqrt{2} = \frac{m}{n}$，且 $m, n$ 无公约数.
 
+由 $\sqrt{2}$ 的定义可知 $\displaystyle (\sqrt{2})^2 = 2 = \left(\frac{m}{n}\right)^2$. 则可得 $m^2 = 2n^2$，因此 $m^2$ 为偶数.
+
+因为 $m^2$ 为偶数，则 $m$ 必为偶数. 由此可得 $\displaystyle n^2 = \frac{m^2}{2}$ 也必为偶数.
+
+因此 $n$ 也为偶数，其与 $m$ 至少存在一个公约数 $2$，这与原假设矛盾.
+
+所以 $\sqrt{2}$ 不为有理数.
+
+\vspace{1.5em}
+
+假定 $\sqrt{3}$ 为有理数，则存在 ${m, n \in \Z}$ 使得 $\displaystyle\sqrt{3} = \frac{m}{n}$，且 $m, n$ 无公约数.
+
+由 $\sqrt{3}$ 的定义可知 $\displaystyle (\sqrt{3})^2 = 3 = \left(\frac{m}{n}\right)^2$. 则可得 $m^2 = 3n^2$，因此 $m$ 能被 $3$ 整除.
+
+因为 $m$ 能被 $3$ 整除，则 $m^2 = 9z, z \in \mathbb{N}$. 由此可得 $\displaystyle n^2 = \frac{m^2}{3} = 3z$.
+
+因此 $n$ 也能被 $3$ 整除，其与 $m$ 至少存在一个公约数 $3$，这与原假设矛盾.
+
+所以 $\sqrt{3}$ 不为有理数.
+
+\vspace{1.5em}
+
+假定 $\sqrt{2} + \sqrt{3}$ 为有理数，则存在 ${m, n \in \Z}$ 使得 $\displaystyle\sqrt{2} + \sqrt{3} = \frac{m}{n}$，且 $m, n$ 无公约数.
+
+则 $(\sqrt{2} + \sqrt{3})^2 = \left(\frac{m}{n}\right)^2 =  5 + 2\sqrt{6}$
+
+通过反证法易得 $\sqrt{6}$ 为无理数，由问题 1 的结论易得 $5 + 2\sqrt{6}$ 也为无理数.
+
+这与 $\displaystyle \left(\frac{m}{n}\right)^2$ 为有理数的假定相矛盾. 所以 $\sqrt{2} + \sqrt{3}$ 不为有理数.
 \end{solution}
 
 4. 把下列循环小数表示为分数：
@@ -105,21 +135,70 @@
 \indent（2）若 $r + s\sqrt{2} + t\sqrt{3} = 0$，则 $r = s = t = 0$.
 
 \begin{solution}
+（1）因为 $r$ 为有理数，按照定义 $\displaystyle r = \frac{m}{n}$，其中 $m, n \in \Z$. 由此可得：
+\[s = \frac{-m}{n\sqrt{2}}\]
 
+由问题 1, 3 的结论可知 $\sqrt{2}$ 为无理数，无理数和任何不为 $0$ 的有理数相乘均为无理数.
+
+则可知 $s$ 为有理数时，$s = 0$，因此 $r = s = 0$.
+
+（2）证明略
 \end{solution}
 
 6. 设实数 $a_1, a_2, \cdots, a_n$ 都有相同的符号，且都大于 $-1$. 证明：
 \[ (1 + a_1)\ (1 + a_2) \cdots (1 + a_n) \geq 1 + a_1 + a_2 + \cdots + a_n \text{.} \]
 
 \begin{solution}
+当 $n = 1$ 时，原不等式为 $(1 + a_1) = 1 + a_1$，成立。
 
+当 $n = 2$ 时，原不等式为 $(1 + a_1)(1 + a_2) = 1 + a_1 + a_2 + a_1a_2 > 1 + a_1 + a_2$，亦成立。
+
+假设当 $n = k, k \in [2, +\infty)$ 时原不等式成立.
+
+因为 $\forall (a_n + 1) > 0$，则可得当 $n = k + 1$ 时存在下列不等式：
+\[(1 + a_1)(1 + a_2) \cdots (1 + a_k)(1 + a_{k+1}) \geq (1 + a_1 + a_2 + \cdots + a_k)(1 + a_{k+1})\]
+
+显然可得：
+\[(1 + a_1 + a_2 + \cdots + a_k)(1 + a_{k+1}) = (1 + a_1 + a_2 + \cdots + a_k) + (a_{k+1} + a_{1}a_{k+1} + \cdots + a_{k}a_{k+1})\]
+
+因为所有的 $a_n$ 均为相同符号，则可得不等式：
+\[(1 + a_1 + a_2 + \cdots + a_k) + (a_{k+1} + a_{1}a_{k+1} + \cdots + a_{k}a_{k+1}) > 1 + a_1 + a_2 + \cdots + a_k + a_{k+1}\]
+
+故 $n = k + 1$ 时，原不等式成立，由此可得原不等式对 $n \in \N+$ 一定成立.
 \end{solution}
 
 7. 设 $a, b$ 是实数，且 $|a| < 1, |b| < 1$. 证明：
 \[ \left| \frac{a + b}{1 + ab} \right| < 1 \text{.} \]
 
 \begin{solution}
+因为 $|a| < 1, |b| < 1$，可知 $-1 < a < 1, -1 < b < 1$.
 
+由此可得 $-1 < ab < 1, 0 < 1 + ab < 2$.
+
+由题设可得：
+\begin{gather*}
+    \left| \frac{a + b}{1 + ab} \right| < 1\\
+    |a + b| < |1 + ab| = 1 + ab\\
+    - 1 - ab < a + b < 1 + ab
+\end{gather*}
+
+对于 $a + b < 1 + ab$ 可得：
+\begin{gather*}
+    a + b - 1 - ab < 0\\
+    (a - 1)(1 - b) < 0
+\end{gather*}
+
+因为 $|a| < 1, |b| < 1$，所以 $a - 1 < 0, 1 - b > 0$，所以 $a + b < 1 + ab$ 成立.
+
+对于 $a + b > -1 - ab$ 可得：
+\begin{gather*}
+    a + b + 1 + ab > 0\\
+    (a + 1)(b + 1) > 0
+\end{gather*}
+
+因为 $|a| < 1, |b| < 1$，所以 $a + 1 > 0, b + 1 > 0$，所以 $a + b > -1 - ab$ 成立.
+
+所以题设不等式成立.
 \end{solution}
 
 \ifx\allfiles\undefined
